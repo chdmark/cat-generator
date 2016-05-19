@@ -21,6 +21,11 @@ class Cat
 		'meow meow'
 	end
 
+	#method for cat being able to scratch
+	def scratch
+		'scratch scratch'
+	end
+
 
 	private
 
