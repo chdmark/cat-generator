@@ -16,11 +16,11 @@ class CatView
 		puts "Your cat's age is #{cat.age}"
 		puts "Your cat's image url is #{cat.image_url}"
 	
-		 if cat.friendly
-		 	puts "Your cat is friendly"
-		 else
+		if cat.friendly
+			puts "Your cat is friendly"
+		else
 		 	puts "Your cat is unfriendly"
-		 end
+		end
 	end
 
 	#method to display possible actions of the cat

@@ -15,19 +15,19 @@ class Cat
 		@lives = args[:lives] || 9
 		@alive = args[:alive] || true
 	end
-
+	
 	#method for cat meow
 	def meow
 		return if is_dead
 		'meow meow'
 	end
-
+	
 	#method for cat being able to scratch
 	def scratch
 		return if is_dead
 		'scratch scratch'
 	end
-
+	
 	#method for cat being able to sleep
 	def sleep
 		return if is_dead
@@ -53,7 +53,7 @@ class Cat
 
 	def perform_trick(trick)
 		return if is_dead
-		#dictionary for tricks available 
+		#dictionary of tricks available 
 		tricks_available = {
 			"jump" => true, 
 			"roll" => true, 
@@ -63,7 +63,6 @@ class Cat
 		}
 		#generate a random number to randomize success of trick
 		randomize_success = rand(1..10)
-
 
 		if randomize_success  <= 5 && tricks_available[trick]
 			"Cat successfully performed #{trick}. Awesome!"
