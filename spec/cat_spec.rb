@@ -11,5 +11,8 @@ describe Cat do
 		it 'has a name' do 
 			expect(cat.name).to eq 'Chris'
 		end
+		it 'has a color' do 
+			expect(cat.color).to eq 'blue'
+		end
 	end
 end
