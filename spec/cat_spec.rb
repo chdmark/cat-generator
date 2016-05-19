@@ -43,4 +43,13 @@ describe Cat do
 			expect(cat.sleep).to eq "zzzz"
 		end
 	end
+
+	describe 'advanced actions: eating' do 
+		it 'can eat something good' do 
+			expect(cat.eat('cat food')).to eq "Cat is eating cat food. That's cool"
+		end
+		it 'can eat something bad' do 
+			expect{cat.eat('dead rat')}.to output("Cat is eating dead rat. That's bad\n").to_stdout
+		end
+	end
 end
