@@ -5,7 +5,7 @@ class CatView
 	
 	#method to greet the user
 	def self.welcome
-		puts "Welcome to the Cat generator"
+		puts "Welcome to the Cat Generator"
 		puts "Do you want to generate a cat?(yes or no)"
 	end
 
@@ -14,7 +14,7 @@ class CatView
 		puts "Your cat's name is #{cat.name}"
 		puts "Your cat's color is #{cat.color}"
 		puts "Your cat's age is #{cat.age}"
-		puts "Your cat's image is #{cat.image_url}"
+		puts "Your cat's image url is #{cat.image_url}"
 	
 		 if cat.friendly
 		 	puts "Your cat is friendly"
@@ -26,6 +26,7 @@ class CatView
 	#method to display possible actions of the cat
 	def self.display_actions
 		puts "Here is what your cat can do..."
+		puts "Please choose a number"
 		puts "1. Meow"
 		puts "2. Eat"
 		puts "3. Scratch"
@@ -39,9 +40,9 @@ class CatView
 		input = self.gather_response
 		while input != "quit" 
 			if input == "1"
-				puts @random_cat.meow
+				puts cat.meow
 			elsif input =="2"
-				puts "What would you like it to eat?"
+				puts "What would you like it to eat? Hint: It likes cat food and live mouse"
 				input_food = self.gather_response
 				puts cat.eat(input_food)
 			elsif input =="3"
