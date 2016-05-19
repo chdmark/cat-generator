@@ -63,5 +63,8 @@ describe Cat do
 		it 'loses a life if it fails to perform a trick' do 
 			expect{cat.perform_trick("duck").to change{cat.lives}.by(-1)}
 		end
+		it 'does not perform a trick if it does not know it' do 
+			expect(cat.perform_trick("kill")).to eq "Cat doesn't know trick! Try again"
+		end
 	end
 end
