@@ -12,21 +12,29 @@ class CatView
 	#method to display the attributes of the cat to user
 	def self.display_attributes(cat)
 		puts "Your cat's name is #{cat.name}"
+		puts "-" * 50
 		puts "Your cat's color is #{cat.color}"
+		puts "-" * 50
 		puts "Your cat's age is #{cat.age}"
+		puts "-" * 50
 		puts "Your cat's image url is #{cat.image_url}"
+		puts "-" * 50
 	
 		if cat.friendly
 			puts "Your cat is friendly"
+			puts "-" * 50
 		else
 		 	puts "Your cat is unfriendly"
+		 	puts "-" * 50
 		end
 	end
 
 	#method to display possible actions of the cat
 	def self.display_actions
 		puts "Here is what your cat can do..."
+		puts "-" * 50
 		puts "Please choose a number"
+		puts "-" * 50
 		puts "1. Meow"
 		puts "2. Eat"
 		puts "3. Scratch"

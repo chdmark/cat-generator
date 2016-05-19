@@ -6,7 +6,7 @@ This cat generator is based on the MVC model using only raw Ruby. The generator 
 
 ## Setting up the Environment
 
-1. After cloning the repo from Github, type "bundle install" in your terminal to install the ncessary gems.
+1. After cloning the repo from Github, type "bundle install" in your terminal to install the necessary gems.
 
 ## Running the program
 
