@@ -13,6 +13,9 @@ The decision to use the MVC model was to keep everything cleaner and easier to r
 
 HTTParty gem was used to make the GET request to the CAT API, the Faker gem was used to generate random names and colors for the cat. 
 
+
+The generator will automically generate you a cat with a name, age, color of the cat, whether it's friendly or not, and an image url from the Cat API. The cat can meow, sleep, eat, scratch, and perform a trick. The cat has 9 lives. It can also lose a life it eats something bad and fails to perform a trick.   
+
 ## Setting up the Environment
 
 1. After cloning the repo from Github, type "bundle install" in your terminal to install the necessary gems.
