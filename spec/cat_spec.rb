@@ -28,7 +28,7 @@ describe Cat do
 			expect(cat.lives).to eq 9
 		end
 		it 'should be alive' do 
-			expect(cat.alive).to be true
+			expect(cat.alive).to eq true
 		end
 	end
 
@@ -65,6 +65,17 @@ describe Cat do
 		end
 		it 'does not perform a trick if it does not know it' do 
 			expect(cat.perform_trick("kill")).to eq "Cat doesn't know trick! Try again"
+		end
+	end
+
+	describe 'death of cat' do 
+		it 'should die if lives reaches 0' do 
+			dead_cat.lose_life 
+			expect(dead_cat.alive).to eq false
+		end
+		it 'should not be able to do actions if dead' do 
+			dead_cat.lose_life
+			expect{dead_cat.scratch}.to output("Your cat is dead.\n").to_stdout
 		end
 	end
 end
