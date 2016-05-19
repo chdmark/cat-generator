@@ -14,5 +14,15 @@ describe Cat do
 		it 'has a color' do 
 			expect(cat.color).to eq 'blue'
 		end
+		it 'has a boolean field friendly' do 
+			expect(!!cat.friendly).to eq cat.friendly
+		end
+		it 'has an image_url' do 
+			expect(cat.image_url).to eq @cat_image
+		end
+
+		it 'should default to nine lives' do 
+			expect(cat.lives).to eq 9
+		end
 	end
 end
