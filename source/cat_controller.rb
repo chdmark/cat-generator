@@ -20,4 +20,14 @@ class CatController
 		end
 	end
 
+	#method to display the actions and gather user input for desired cat action
+	def self.actions
+		CatView.display_actions
+		CatView.cat_actions(@random_cat)
+	end
+
+	def self.get_image
+		CatImageParser.get_image
+	end
+
 end
