@@ -12,8 +12,8 @@ class Cat
 		@color = args[:color]
 		@friendly = args[:friendly]
 		@image_url = args[:image_url]
-		@lives = args[:lives] || 9
-		@alive = args[:alive] || true
+		@lives = args[:lives] || 9 #default to 9 lives
+		@alive = args[:alive] || true #default to true
 	end
 	
 	#method for cat meow
@@ -51,6 +51,7 @@ class Cat
 		end
 	end
 
+	#method for cat to perform trick
 	def perform_trick(trick)
 		return if is_dead
 		#dictionary of tricks available 
