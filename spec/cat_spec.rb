@@ -31,4 +31,10 @@ describe Cat do
 			expect(cat.alive).to be true
 		end
 	end
+
+	describe 'basic actions' do 
+		it 'should be able to meow' do 
+			expect(cat.meow).to eq 'meow meow'
+		end
+	end
 end
