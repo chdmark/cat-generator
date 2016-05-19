@@ -26,6 +26,11 @@ class Cat
 		'scratch scratch'
 	end
 
+	#method for cat being able to sleep
+	def sleep
+		'zzzz'
+	end
+
 
 	private
 
