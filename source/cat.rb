@@ -18,16 +18,19 @@ class Cat
 
 	#method for cat meow
 	def meow
+		return if is_dead
 		'meow meow'
 	end
 
 	#method for cat being able to scratch
 	def scratch
+		return if is_dead
 		'scratch scratch'
 	end
 
 	#method for cat being able to sleep
 	def sleep
+		return if is_dead
 		'zzzz'
 	end
 
