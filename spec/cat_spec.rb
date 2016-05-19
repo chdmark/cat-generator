@@ -36,5 +36,8 @@ describe Cat do
 		it 'should be able to meow' do 
 			expect(cat.meow).to eq 'meow meow'
 		end
+		it 'should be able to scratch things' do
+			expect(cat.scratch).to eq "scratch scratch"
+		end
 	end
 end
