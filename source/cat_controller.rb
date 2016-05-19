@@ -12,11 +12,19 @@ class CatController
 		input = CatView.gather_response #gather user response
 
 		while input == "yes"
-
 			#create a new cat
 			@random_cat = Cat.new(name: Faker::Name.name, color: Faker::Color.color_name, friendly: [true, false].sample, image_url: get_image, age: rand(1..15)) 
 			#display cat attributes to user
 			CatView.display_attributes(@random_cat)
+			
+			#display actions and gather user input
+			self.actions
+
+			#if user quits, show welcome screen message again
+			CatView.welcome
+
+			#gather user input
+			input = CatView.gather_response
 		end
 	end
 
