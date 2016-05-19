@@ -1,8 +1,9 @@
 # Cat Generator
 
+![Alt text](img/cat_image.jpg)
+
 ## Background
 
-![Alt text](img/cat_image.jpg)
 
 This cat generator is based on the MVC model using only raw Ruby. The generator is run on the terminal and accepts user input to generate a random cat. The user has the ability to select what action they want the cat to perform. 
 
