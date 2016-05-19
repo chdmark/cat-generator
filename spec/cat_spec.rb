@@ -60,5 +60,8 @@ describe Cat do
 		it 'can perform a trick successfully' do 
 			expect(cat.perform_trick("jump")).to eq "Cat successfully performed jump. Awesome!"
 		end
+		it 'loses a life if it fails to perform a trick' do 
+			expect{cat.perform_trick("duck").to change{cat.lives}.by(-1)}
+		end
 	end
 end
