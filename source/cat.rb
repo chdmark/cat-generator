@@ -31,6 +31,33 @@ class Cat
 		'zzzz'
 	end
 
+	#method for cat being able to eat
+	def eat(food)
+		return if is_dead
+		#dictionary for good food
+		good_food  = {
+			'cat food' => true,
+			'live mouse' => true
+		}
+		#food is good if it is in the dictionary
+		if good_food[food]
+			 "Cat is eating #{food}. That's cool"
+		else
+			 puts "Cat is eating #{food}. That's bad"
+			 lose_life #it will lose a life
+		end
+	end
+
+	#method for cat losing a life
+	def lose_life
+		@lives -=1
+		if @lives <= 0
+			puts "your cat is dead"
+			@alive = false
+		else
+			"Your cat has #{@lives} lives left"
+		end
+	end
 
 	private
 
