@@ -51,5 +51,8 @@ describe Cat do
 		it 'can eat something bad' do 
 			expect{cat.eat('dead rat')}.to output("Cat is eating dead rat. That's bad\n").to_stdout
 		end
+		it 'loses a life if it eats something bad' do 
+			expect{cat.eat('dead rat')}.to change{cat.lives}.by(-1)
+		end
 	end
 end
