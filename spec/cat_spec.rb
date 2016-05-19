@@ -14,6 +14,9 @@ describe Cat do
 		it 'has a color' do 
 			expect(cat.color).to eq 'blue'
 		end
+		it 'has an age' do 
+			expect(cat.age).to eq 15
+		end
 		it 'has a boolean field friendly' do 
 			expect(!!cat.friendly).to eq cat.friendly
 		end
@@ -23,6 +26,9 @@ describe Cat do
 
 		it 'should default to nine lives' do 
 			expect(cat.lives).to eq 9
+		end
+		it 'should be alive' do 
+			expect(cat.alive).to be true
 		end
 	end
 end
