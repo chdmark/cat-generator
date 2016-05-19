@@ -23,11 +23,21 @@ class CatView
 		 end
 	end
 
+	#method to display possible actions of the cat
+	def self.display_actions
+		puts "Here is what your cat can do..."
+		puts "1. Meow"
+		puts "2. Eat"
+		puts "3. Scratch"
+		puts "4. Sleep"
+		puts "5. Trick"
+		puts "(Type 'quit' to quit.)"
+	end
+
 	#method for user to select various cat actions
 	def self.cat_actions(cat)
 		input = self.gather_response
 		while input != "quit" 
-
 			if input == "1"
 				puts @random_cat.meow
 			elsif input =="2"
@@ -46,7 +56,6 @@ class CatView
 				puts "Input of '#{input}' is not recognized."
 				puts "Please enter a number for one of the options above!"
 			end
-
 			self.display_actions
 			input = self.gather_response
 		end
