@@ -55,4 +55,10 @@ describe Cat do
 			expect{cat.eat('dead rat')}.to change{cat.lives}.by(-1)
 		end
 	end
+
+	describe 'advanced actions: tricks' do 
+		it 'can perform a trick successfully' do 
+			expect(cat.perform_trick("jump")).to eq "Cat successfully performed jump. Awesome!"
+		end
+	end
 end
