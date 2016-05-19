@@ -51,6 +51,30 @@ class Cat
 		end
 	end
 
+	def perform_trick(trick)
+		return if is_dead
+		#dictionary for tricks available 
+		tricks_available = {
+			"jump" => true, 
+			"roll" => true, 
+			"hide" => true, 
+			"duck" => true, 
+			"attack" => true
+		}
+		#generate a random number to randomize success of trick
+		randomize_success = rand(1..10)
+
+
+		if randomize_success  <= 5 && tricks_available[trick]
+			"Cat successfully performed #{trick}. Awesome!"
+		elsif randomize_success  && tricks_available[trick]
+			puts "Cat failed to perform #{trick}"
+			lose_life
+		else
+			"Cat doesn't know trick! Try again"
+		end
+	end
+
 	#method for cat losing a life
 	def lose_life
 		@lives -=1
@@ -64,6 +88,7 @@ class Cat
 
 	private
 
+	#method to check if cat is dead. it cannot perform anything if it is dead.
 	def is_dead
 		if @lives <= 0 
 			puts "Your cat is dead."
