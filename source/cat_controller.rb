@@ -1,7 +1,7 @@
 require_relative 'cat'
 require_relative 'cat_view'
 require_relative 'cat_api_image_parser'
-require 'faker' #faker gem to randomize
+require 'faker' 
 
 #Cat controller to help control the flow of the generator 
 class CatController
