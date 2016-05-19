@@ -16,4 +16,20 @@ class Cat
 		@alive = args[:alive] || true
 	end
 
+	#method for cat meow
+	def meow
+		'meow meow'
+	end
+
+
+	private
+
+	def is_dead
+		if @lives <= 0 
+			puts "Your cat is dead."
+			return true
+		else
+			return false
+		end
+	end
 end
